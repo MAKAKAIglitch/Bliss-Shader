@@ -273,7 +273,7 @@ void DoSpecularReflections(
 				previousPosition = mat3(gbufferPreviousModelView) * previousPosition + gbufferPreviousModelView[3].xyz;
 				previousPosition.xy = projMAD(gbufferPreviousProjection, previousPosition).xy / -previousPosition.z * 0.5 + 0.5;
 		
-				if (previousPosition.x > 0.0 && previousPosition.y > 0.0 && previousPosition.x < 1.0 && previousPosition.x < 1.0) {
+				if (previousPosition.x > 0.0 && previousPosition.y > 0.0 && previousPosition.x < 1.0 && previousPosition.y < 1.0) {
 					SS_Reflections.a = 1.0;
 					SS_Reflections.rgb = texture2DLod(colortex5, previousPosition.xy, LOD).rgb * Metals;
 				}

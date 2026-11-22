@@ -378,7 +378,7 @@ vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, boo
 
 	float handSwitch = hand ? 1.0 : 0.0;
 
-    float steps = 16.0;
+    float steps = float(SSRT_SHADOW_STEPS);
 	float Shadow = 1.0; 
 	float SSS = 0.0;
 	
